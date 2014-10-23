@@ -1,0 +1,14 @@
+{
+  "name": "aegir2",
+  "description": "aegir2 role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[apt::default]",
+    "recipe[aegir2::default]"
+  ],
+  "default_attributes": {
+    "aegir2" : {
+      "admin_email": "another@email.please"
+    }
+  }
+}
