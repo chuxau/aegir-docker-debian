@@ -28,6 +28,8 @@ ADD ./apachestart.sh /apachestart.sh
 RUN chmod 755 /apachestart.sh
 EXPOSE 80
 ADD ./aegir-docker-debian.txt /aegir-docker-debian.txt
-RUN cat "/aegir-docker-debian.txt"
+ADD ./README.md /README.md
+ADD ./LICENSE /LICENSE
+RUN cat "/LICENSE" "/README.md" "/aegir-docker-debian.txt"
 
 ENTRYPOINT ["/bin/bash", "/apachestart.sh"]
