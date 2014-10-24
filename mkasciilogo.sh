@@ -1,3 +1,4 @@
 #/bin/sh
 # make an ascii art logo from DDD.jpg
-jp2a -i --chars='  AAaaDDddEEeeGGggIIiiRRrrOOooCCccKKkkBBbbNNnn-' -b --height=40 aegir-docker-debian.jpg | tee aegir-docker-debian.txt
+#jp2a --color --html --fill --background=light -i --chars='  AAaaDDddEEeeGGggIIiiRRrrOOooCCccKKkkBBbbNNnn-' -b --height=40 aegir-docker-debian.jpg | tee aegir-docker-debian.html
+jp2a --color --background=dark  --chars='  AAaaDDddEEeeGGggIIiiRRrrOOooCCccKKkkBBbbNNnn-' -b --height=40 aegir-docker-debian.jpg | tee aegir-docker-debian.txt

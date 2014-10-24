@@ -23,3 +23,9 @@ ADD ./chef/solo.json /var/chef/solo.json
 RUN echo "Installing berks This may take a few minutes....."
 RUN cd / && /opt/chef/embedded/bin/berks vendor /var/chef/cookbooks
 RUN chef-solo -c /var/chef/solo.rb -j /var/chef/solo.json
+
+ADD ./start.sh /apachestart.sh
+RUN chmod 755 /apachestart.sh
+EXPOSE 80
+
+CMD ["/bin/bash", "/apachestart.sh"]
