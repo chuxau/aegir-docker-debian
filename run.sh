@@ -1,4 +1,4 @@
 #/bin/sh
-sudo echo 'Starting Aegir-docker-debian'
-sudo docker run -P aegir-docker-debian &
-sudo docker ps
+echo 'Starting Aegir-docker-debian'
+docker run -P aegir-docker-debian &
+docker ps
